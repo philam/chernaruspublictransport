@@ -1373,6 +1373,9 @@ input.ct-red + span + label + span.switch-right {
 
 .navbar-ct-red {
   background-color: rgba(255, 76, 64, 0.98); }
+  
+  .navbar-ct-grey {
+  background-color: rgba(169, 169, 169, 0.98); }
 
 .navbar-transparent {
   padding-top: 15px;
