@@ -25,15 +25,15 @@
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
     <script src="ol.js"></script>
 	
-    <style>
-    .map {
-      height: 100px;
-      width: 100%;
-    }
-</style>
-</head>
-	
-<body>
+	<style>
+	.map
+	{
+    height: 90%;
+    width: 100%;
+    margin-top: 5.5em;
+	}
+	</style>
+
 <div id="navbar-full">
     <div class="container">
         <nav class="navbar navbar-ct-blue navbar-fixed-top" role="navigation">
@@ -72,8 +72,10 @@
         </nav>
     </div><!--  end container-->
 </div>
-
-    <div id='map'></div>
+</head>
+	
+<body>
+    <div id='map' class='map'></div>
     <script>
 // Map views always need a projection.  Here we just want to map image
       // coordinates directly to map coordinates, so we create a projection that uses
@@ -85,7 +87,7 @@
         units: 'pixels',
         extent: extent
       });
-
+	  
       var map = new ol.Map({
         layers: [
           new ol.layer.Image({
@@ -95,7 +97,8 @@
               projection: projection,
               imageExtent: extent
             })
-          })
+          })  
+		  
         ],
         target: 'map',
         view: new ol.View({
